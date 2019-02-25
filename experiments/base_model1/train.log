@@ -1,0 +1,60 @@
+2019-02-25 10:46:39,233:INFO: Loading the datasets...
+2019-02-25 10:46:39,236:INFO: - done.
+2019-02-25 10:46:42,835:INFO: Starting training for 10 epoch(s)
+2019-02-25 10:46:42,836:INFO: Epoch 1/10
+2019-02-25 10:46:42,874:INFO: - Train metrics: accuracy: 0.252 ; loss: 2.117
+2019-02-25 10:46:42,880:INFO: - Eval metrics : accuracy: 0.306 ; loss: 2.116
+2019-02-25 10:46:42,885:INFO: - Found new best accuracy
+2019-02-25 10:46:42,886:INFO: Epoch 2/10
+2019-02-25 10:46:42,902:INFO: - Train metrics: accuracy: 0.429 ; loss: 2.085
+2019-02-25 10:46:42,908:INFO: - Eval metrics : accuracy: 0.410 ; loss: 2.093
+2019-02-25 10:46:42,912:INFO: - Found new best accuracy
+2019-02-25 10:46:42,914:INFO: Epoch 3/10
+2019-02-25 10:46:42,930:INFO: - Train metrics: accuracy: 0.563 ; loss: 2.055
+2019-02-25 10:46:42,935:INFO: - Eval metrics : accuracy: 0.510 ; loss: 2.069
+2019-02-25 10:46:42,939:INFO: - Found new best accuracy
+2019-02-25 10:46:42,940:INFO: Epoch 4/10
+2019-02-25 10:46:42,957:INFO: - Train metrics: accuracy: 0.639 ; loss: 2.024
+2019-02-25 10:46:42,963:INFO: - Eval metrics : accuracy: 0.603 ; loss: 2.046
+2019-02-25 10:46:42,966:INFO: - Found new best accuracy
+2019-02-25 10:46:42,967:INFO: Epoch 5/10
+2019-02-25 10:46:42,984:INFO: - Train metrics: accuracy: 0.773 ; loss: 1.992
+2019-02-25 10:46:42,989:INFO: - Eval metrics : accuracy: 0.639 ; loss: 2.021
+2019-02-25 10:46:42,993:INFO: - Found new best accuracy
+2019-02-25 10:46:42,994:INFO: Epoch 6/10
+2019-02-25 10:46:43,010:INFO: - Train metrics: accuracy: 0.824 ; loss: 1.958
+2019-02-25 10:46:43,015:INFO: - Eval metrics : accuracy: 0.696 ; loss: 1.994
+2019-02-25 10:46:43,019:INFO: - Found new best accuracy
+2019-02-25 10:46:43,025:INFO: Epoch 7/10
+2019-02-25 10:46:43,041:INFO: - Train metrics: accuracy: 0.832 ; loss: 1.921
+2019-02-25 10:46:43,047:INFO: - Eval metrics : accuracy: 0.724 ; loss: 1.965
+2019-02-25 10:46:43,051:INFO: - Found new best accuracy
+2019-02-25 10:46:43,057:INFO: Epoch 8/10
+2019-02-25 10:46:43,074:INFO: - Train metrics: accuracy: 0.849 ; loss: 1.880
+2019-02-25 10:46:43,080:INFO: - Eval metrics : accuracy: 0.744 ; loss: 1.933
+2019-02-25 10:46:43,083:INFO: - Found new best accuracy
+2019-02-25 10:46:43,085:INFO: Epoch 9/10
+2019-02-25 10:46:43,101:INFO: - Train metrics: accuracy: 0.857 ; loss: 1.834
+2019-02-25 10:46:43,107:INFO: - Eval metrics : accuracy: 0.752 ; loss: 1.896
+2019-02-25 10:46:43,111:INFO: - Found new best accuracy
+2019-02-25 10:46:43,113:INFO: Epoch 10/10
+2019-02-25 10:46:43,129:INFO: - Train metrics: accuracy: 0.857 ; loss: 1.781
+2019-02-25 10:46:43,135:INFO: - Eval metrics : accuracy: 0.764 ; loss: 1.855
+2019-02-25 10:46:43,139:INFO: - Found new best accuracy
+2019-02-25 10:56:24,112:ERROR: Invalid alias: The name clear can't be aliased because it is another magic command.
+2019-02-25 10:56:24,112:ERROR: Invalid alias: The name more can't be aliased because it is another magic command.
+2019-02-25 10:56:24,113:ERROR: Invalid alias: The name less can't be aliased because it is another magic command.
+2019-02-25 10:56:24,114:ERROR: Invalid alias: The name man can't be aliased because it is another magic command.
+2019-02-25 11:00:47,955:INFO: Loading the datasets...
+2019-02-25 11:00:47,957:INFO: - done.
+2019-02-25 11:00:52,456:INFO: Starting training for 10 epoch(s)
+2019-02-25 11:02:34,899:ERROR: Invalid alias: The name clear can't be aliased because it is another magic command.
+2019-02-25 11:02:34,900:ERROR: Invalid alias: The name more can't be aliased because it is another magic command.
+2019-02-25 11:02:34,901:ERROR: Invalid alias: The name less can't be aliased because it is another magic command.
+2019-02-25 11:02:34,901:ERROR: Invalid alias: The name man can't be aliased because it is another magic command.
+2019-02-25 11:07:50,875:INFO: Loading the datasets...
+2019-02-25 11:07:50,879:INFO: - done.
+2019-02-25 11:07:55,437:INFO: Starting training for 10 epoch(s)
+2019-02-25 11:17:02,716:INFO: Loading the datasets...
+2019-02-25 11:17:02,719:INFO: - done.
+2019-02-25 11:17:02,727:INFO: Starting training for 10 epoch(s)
