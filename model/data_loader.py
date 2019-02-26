@@ -163,5 +163,10 @@ class DataLoader(object):
 
             # convert them to Variables to record operations in the computational graph
             batch_data, batch_labels = Variable(batch_data), Variable(batch_labels)
+            print(type(batch_data))
+            print(type(batch_labels))
+            print(batch_data.dtype)
+            print(batch_data[0].dtype)
+            print(batch_data[0])
     
             yield batch_data, batch_labels

@@ -62,8 +62,11 @@ class Net(nn.Module):
         #                                -> batch_size x seq_len
         # apply the embedding layer that maps each token to its embedding
         s = self.embedding(s)            # dim: batch_size x seq_len x embedding_dim
+        print(s.dtype)
+        print(s)
 
         # run the LSTM along the sentences of length seq_len
+        #s = s.to(dtype=torch.long)
         s, _ = self.lstm(s)              # dim: batch_size x seq_len x lstm_hidden_dim
 
         # make the Variable contiguous in memory (a PyTorch artefact)
