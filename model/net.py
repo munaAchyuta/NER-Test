@@ -35,6 +35,8 @@ class Net(nn.Module):
 
         # the embedding takes as input the vocab_size and the embedding_dim
         self.embedding = nn.Embedding(params.vocab_size, params.embedding_dim)
+        #weight = torch.FloatTensor([[1, 2.3, 3], [4, 5.1, 6.3]])
+        #self.embedding = nn.Embedding.from_pretrained(weight)
 
         # the LSTM takes as input the size of its input (embedding_dim), its hidden size
         # for more details on how to use it, check out the documentation
@@ -62,8 +64,6 @@ class Net(nn.Module):
         #                                -> batch_size x seq_len
         # apply the embedding layer that maps each token to its embedding
         s = self.embedding(s)            # dim: batch_size x seq_len x embedding_dim
-        print(s.dtype)
-        print(s)
 
         # run the LSTM along the sentences of length seq_len
         #s = s.to(dtype=torch.long)

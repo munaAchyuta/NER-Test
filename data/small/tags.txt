@@ -1,9 +1,9 @@
+B-LOC
 O
-B-geo
-B-gpe
-B-per
-I-geo
-B-org
-I-org
-B-tim
-I-per
+B-ORG
+B-PER
+I-PER
+B-MISC
+I-ORG
+I-LOC
+I-MISC

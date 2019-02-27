@@ -91,3 +91,96 @@
 2019-02-26 18:01:14,292:ERROR: Invalid alias: The name more can't be aliased because it is another magic command.
 2019-02-26 18:01:14,292:ERROR: Invalid alias: The name less can't be aliased because it is another magic command.
 2019-02-26 18:01:14,294:ERROR: Invalid alias: The name man can't be aliased because it is another magic command.
+2019-02-27 07:27:57,424:INFO: Loading the datasets...
+2019-02-27 07:27:57,678:INFO: - done.
+2019-02-27 07:28:46,535:INFO: Loading the datasets...
+2019-02-27 07:28:46,584:INFO: - done.
+2019-02-27 07:30:08,050:INFO: Loading the datasets...
+2019-02-27 07:30:08,101:INFO: - done.
+2019-02-27 07:31:06,099:INFO: Loading the datasets...
+2019-02-27 07:31:41,792:ERROR: Invalid alias: The name clear can't be aliased because it is another magic command.
+2019-02-27 07:31:41,793:ERROR: Invalid alias: The name more can't be aliased because it is another magic command.
+2019-02-27 07:31:41,794:ERROR: Invalid alias: The name less can't be aliased because it is another magic command.
+2019-02-27 07:31:41,794:ERROR: Invalid alias: The name man can't be aliased because it is another magic command.
+2019-02-27 07:32:35,408:INFO: Loading the datasets...
+2019-02-27 07:32:56,746:INFO: Loading the datasets...
+2019-02-27 07:32:56,791:INFO: - done.
+2019-02-27 07:32:59,728:INFO: Starting training for 10 epoch(s)
+2019-02-27 07:56:27,928:ERROR: Invalid alias: The name clear can't be aliased because it is another magic command.
+2019-02-27 07:56:27,929:ERROR: Invalid alias: The name more can't be aliased because it is another magic command.
+2019-02-27 07:56:27,930:ERROR: Invalid alias: The name less can't be aliased because it is another magic command.
+2019-02-27 07:56:27,931:ERROR: Invalid alias: The name man can't be aliased because it is another magic command.
+2019-02-27 08:01:30,032:INFO: Loading the datasets...
+2019-02-27 08:01:30,079:INFO: - done.
+2019-02-27 08:01:33,005:INFO: Starting training for 10 epoch(s)
+2019-02-27 08:08:56,854:ERROR: Invalid alias: The name clear can't be aliased because it is another magic command.
+2019-02-27 08:08:56,855:ERROR: Invalid alias: The name more can't be aliased because it is another magic command.
+2019-02-27 08:08:56,855:ERROR: Invalid alias: The name less can't be aliased because it is another magic command.
+2019-02-27 08:08:56,856:ERROR: Invalid alias: The name man can't be aliased because it is another magic command.
+2019-02-27 08:09:23,584:INFO: Loading the datasets...
+2019-02-27 08:09:23,628:INFO: - done.
+2019-02-27 08:09:26,493:INFO: Starting training for 10 epoch(s)
+2019-02-27 08:22:46,189:ERROR: Invalid alias: The name clear can't be aliased because it is another magic command.
+2019-02-27 08:22:46,190:ERROR: Invalid alias: The name more can't be aliased because it is another magic command.
+2019-02-27 08:22:46,190:ERROR: Invalid alias: The name less can't be aliased because it is another magic command.
+2019-02-27 08:22:46,191:ERROR: Invalid alias: The name man can't be aliased because it is another magic command.
+2019-02-27 08:23:11,676:INFO: Loading the datasets...
+2019-02-27 08:23:11,805:INFO: - done.
+2019-02-27 08:23:14,775:INFO: Starting training for 10 epoch(s)
+2019-02-27 08:35:05,266:ERROR: Invalid alias: The name clear can't be aliased because it is another magic command.
+2019-02-27 08:35:05,267:ERROR: Invalid alias: The name more can't be aliased because it is another magic command.
+2019-02-27 08:35:05,268:ERROR: Invalid alias: The name less can't be aliased because it is another magic command.
+2019-02-27 08:35:05,268:ERROR: Invalid alias: The name man can't be aliased because it is another magic command.
+2019-02-27 08:35:26,656:INFO: Loading the datasets...
+2019-02-27 08:35:26,692:INFO: - done.
+2019-02-27 08:35:29,609:INFO: Starting training for 10 epoch(s)
+2019-02-27 08:41:34,164:INFO: collecting all words and their counts
+2019-02-27 08:41:34,165:INFO: PROGRESS: at sentence #0, processed 0 words, keeping 0 word types
+2019-02-27 08:41:34,205:INFO: collected 19950 word types from a corpus of 192004 raw words and 6000 sentences
+2019-02-27 08:41:34,206:INFO: Loading a fresh vocabulary
+2019-02-27 08:41:34,309:INFO: effective_min_count=1 retains 19950 unique words (100% of original 19950, drops 0)
+2019-02-27 08:41:34,309:INFO: effective_min_count=1 leaves 192004 word corpus (100% of original 192004, drops 0)
+2019-02-27 08:41:34,363:INFO: deleting the raw counts dictionary of 19950 items
+2019-02-27 08:41:34,364:INFO: sample=0.001 downsamples 32 most-common words
+2019-02-27 08:41:34,365:INFO: downsampling leaves estimated 127370 word corpus (66.3% of prior 192004)
+2019-02-27 08:41:34,402:INFO: estimated required memory for 19950 words and 100 dimensions: 25935000 bytes
+2019-02-27 08:41:34,402:INFO: resetting layer weights
+2019-02-27 08:41:34,598:INFO: training model with 3 workers on 19950 vocabulary and 100 features, using sg=0 hs=0 sample=0.001 negative=5 window=5
+2019-02-27 08:41:34,694:INFO: worker thread finished; awaiting finish of 2 more threads
+2019-02-27 08:41:34,695:INFO: worker thread finished; awaiting finish of 1 more threads
+2019-02-27 08:41:34,697:INFO: worker thread finished; awaiting finish of 0 more threads
+2019-02-27 08:41:34,698:INFO: EPOCH - 1 : training on 192004 raw words (127330 effective words) took 0.1s, 1344845 effective words/s
+2019-02-27 08:41:34,791:INFO: worker thread finished; awaiting finish of 2 more threads
+2019-02-27 08:41:34,792:INFO: worker thread finished; awaiting finish of 1 more threads
+2019-02-27 08:41:34,795:INFO: worker thread finished; awaiting finish of 0 more threads
+2019-02-27 08:41:34,796:INFO: EPOCH - 2 : training on 192004 raw words (127521 effective words) took 0.1s, 1372491 effective words/s
+2019-02-27 08:41:34,888:INFO: worker thread finished; awaiting finish of 2 more threads
+2019-02-27 08:41:34,889:INFO: worker thread finished; awaiting finish of 1 more threads
+2019-02-27 08:41:34,891:INFO: worker thread finished; awaiting finish of 0 more threads
+2019-02-27 08:41:34,892:INFO: EPOCH - 3 : training on 192004 raw words (127484 effective words) took 0.1s, 1384770 effective words/s
+2019-02-27 08:41:34,985:INFO: worker thread finished; awaiting finish of 2 more threads
+2019-02-27 08:41:34,986:INFO: worker thread finished; awaiting finish of 1 more threads
+2019-02-27 08:41:34,989:INFO: worker thread finished; awaiting finish of 0 more threads
+2019-02-27 08:41:34,990:INFO: EPOCH - 4 : training on 192004 raw words (127445 effective words) took 0.1s, 1367602 effective words/s
+2019-02-27 08:41:35,082:INFO: worker thread finished; awaiting finish of 2 more threads
+2019-02-27 08:41:35,083:INFO: worker thread finished; awaiting finish of 1 more threads
+2019-02-27 08:41:35,086:INFO: worker thread finished; awaiting finish of 0 more threads
+2019-02-27 08:41:35,086:INFO: EPOCH - 5 : training on 192004 raw words (127247 effective words) took 0.1s, 1381816 effective words/s
+2019-02-27 08:41:35,087:INFO: training on a 960020 raw words (637027 effective words) took 0.5s, 1304831 effective words/s
+2019-02-27 08:41:44,499:INFO: Loading the datasets...
+2019-02-27 08:41:44,541:INFO: - done.
+2019-02-27 08:41:44,712:INFO: Starting training for 10 epoch(s)
+2019-02-27 08:42:21,805:ERROR: Invalid alias: The name clear can't be aliased because it is another magic command.
+2019-02-27 08:42:21,806:ERROR: Invalid alias: The name more can't be aliased because it is another magic command.
+2019-02-27 08:42:21,806:ERROR: Invalid alias: The name less can't be aliased because it is another magic command.
+2019-02-27 08:42:21,807:ERROR: Invalid alias: The name man can't be aliased because it is another magic command.
+2019-02-27 08:42:47,332:INFO: Loading the datasets...
+2019-02-27 08:42:47,366:INFO: - done.
+2019-02-27 08:42:50,318:INFO: Starting training for 10 epoch(s)
+2019-02-27 09:34:53,525:ERROR: Invalid alias: The name clear can't be aliased because it is another magic command.
+2019-02-27 09:34:53,526:ERROR: Invalid alias: The name more can't be aliased because it is another magic command.
+2019-02-27 09:34:53,527:ERROR: Invalid alias: The name less can't be aliased because it is another magic command.
+2019-02-27 09:34:53,527:ERROR: Invalid alias: The name man can't be aliased because it is another magic command.
+2019-02-27 09:35:15,820:INFO: Loading the datasets...
+2019-02-27 09:35:15,855:INFO: - done.
+2019-02-27 09:35:18,787:INFO: Starting training for 10 epoch(s)

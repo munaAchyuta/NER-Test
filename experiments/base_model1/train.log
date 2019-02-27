@@ -65,3 +65,23 @@
 2019-02-26 18:01:14,780:ERROR: Invalid alias: The name more can't be aliased because it is another magic command.
 2019-02-26 18:01:14,781:ERROR: Invalid alias: The name less can't be aliased because it is another magic command.
 2019-02-26 18:01:14,782:ERROR: Invalid alias: The name man can't be aliased because it is another magic command.
+2019-02-27 09:30:25,876:INFO: Loading the datasets...
+2019-02-27 09:30:25,879:INFO: - done.
+2019-02-27 09:30:28,367:INFO: Starting training for 10 epoch(s)
+2019-02-27 09:31:54,566:INFO: Loading the datasets...
+2019-02-27 09:31:54,568:INFO: - done.
+2019-02-27 09:31:54,571:INFO: Starting training for 10 epoch(s)
+2019-02-27 09:32:05,611:ERROR: Invalid alias: The name clear can't be aliased because it is another magic command.
+2019-02-27 09:32:05,612:ERROR: Invalid alias: The name more can't be aliased because it is another magic command.
+2019-02-27 09:32:05,613:ERROR: Invalid alias: The name less can't be aliased because it is another magic command.
+2019-02-27 09:32:05,613:ERROR: Invalid alias: The name man can't be aliased because it is another magic command.
+2019-02-27 09:32:17,268:INFO: Loading the datasets...
+2019-02-27 09:32:17,270:INFO: - done.
+2019-02-27 09:32:19,786:INFO: Starting training for 10 epoch(s)
+2019-02-27 09:34:22,865:ERROR: Invalid alias: The name clear can't be aliased because it is another magic command.
+2019-02-27 09:34:22,866:ERROR: Invalid alias: The name more can't be aliased because it is another magic command.
+2019-02-27 09:34:22,867:ERROR: Invalid alias: The name less can't be aliased because it is another magic command.
+2019-02-27 09:34:22,868:ERROR: Invalid alias: The name man can't be aliased because it is another magic command.
+2019-02-27 09:34:32,016:INFO: Loading the datasets...
+2019-02-27 09:34:32,018:INFO: - done.
+2019-02-27 09:34:34,561:INFO: Starting training for 10 epoch(s)
