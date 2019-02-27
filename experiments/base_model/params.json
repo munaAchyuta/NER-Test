@@ -5,6 +5,7 @@
 
     "lstm_hidden_dim": 100,
     "embedding_dim": 100,
+    "pos_dim": 58,
 
     "save_summary_steps": 100
 }

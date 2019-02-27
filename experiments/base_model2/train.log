@@ -1,0 +1,56 @@
+2019-02-27 10:33:46,908:INFO: Loading the datasets...
+2019-02-27 10:33:51,359:INFO: - done.
+2019-02-27 10:34:20,621:INFO: Starting training for 10 epoch(s)
+2019-02-27 11:06:52,136:INFO: Loading the datasets...
+2019-02-27 11:06:57,005:INFO: - done.
+2019-02-27 11:06:57,170:INFO: Starting training for 10 epoch(s)
+2019-02-27 11:11:17,293:ERROR: Invalid alias: The name clear can't be aliased because it is another magic command.
+2019-02-27 11:11:17,294:ERROR: Invalid alias: The name more can't be aliased because it is another magic command.
+2019-02-27 11:11:17,295:ERROR: Invalid alias: The name less can't be aliased because it is another magic command.
+2019-02-27 11:11:17,295:ERROR: Invalid alias: The name man can't be aliased because it is another magic command.
+2019-02-27 11:11:41,395:INFO: Loading the datasets...
+2019-02-27 11:11:45,843:INFO: - done.
+2019-02-27 11:11:49,067:INFO: Starting training for 10 epoch(s)
+2019-02-27 11:16:20,684:INFO: collecting all words and their counts
+2019-02-27 11:16:20,685:INFO: PROGRESS: at sentence #0, processed 0 words, keeping 0 word types
+2019-02-27 11:16:20,725:INFO: collected 19950 word types from a corpus of 192004 raw words and 6000 sentences
+2019-02-27 11:16:20,726:INFO: Loading a fresh vocabulary
+2019-02-27 11:16:20,759:INFO: effective_min_count=1 retains 19950 unique words (100% of original 19950, drops 0)
+2019-02-27 11:16:20,759:INFO: effective_min_count=1 leaves 192004 word corpus (100% of original 192004, drops 0)
+2019-02-27 11:16:20,811:INFO: deleting the raw counts dictionary of 19950 items
+2019-02-27 11:16:20,812:INFO: sample=0.001 downsamples 32 most-common words
+2019-02-27 11:16:20,813:INFO: downsampling leaves estimated 127370 word corpus (66.3% of prior 192004)
+2019-02-27 11:16:20,849:INFO: estimated required memory for 19950 words and 100 dimensions: 25935000 bytes
+2019-02-27 11:16:20,849:INFO: resetting layer weights
+2019-02-27 11:16:21,038:INFO: training model with 3 workers on 19950 vocabulary and 100 features, using sg=0 hs=0 sample=0.001 negative=5 window=5
+2019-02-27 11:16:21,142:INFO: worker thread finished; awaiting finish of 2 more threads
+2019-02-27 11:16:21,146:INFO: worker thread finished; awaiting finish of 1 more threads
+2019-02-27 11:16:21,147:INFO: worker thread finished; awaiting finish of 0 more threads
+2019-02-27 11:16:21,148:INFO: EPOCH - 1 : training on 192004 raw words (127371 effective words) took 0.1s, 1238857 effective words/s
+2019-02-27 11:16:21,246:INFO: worker thread finished; awaiting finish of 2 more threads
+2019-02-27 11:16:21,247:INFO: worker thread finished; awaiting finish of 1 more threads
+2019-02-27 11:16:21,249:INFO: worker thread finished; awaiting finish of 0 more threads
+2019-02-27 11:16:21,250:INFO: EPOCH - 2 : training on 192004 raw words (127480 effective words) took 0.1s, 1306061 effective words/s
+2019-02-27 11:16:21,343:INFO: worker thread finished; awaiting finish of 2 more threads
+2019-02-27 11:16:21,344:INFO: worker thread finished; awaiting finish of 1 more threads
+2019-02-27 11:16:21,347:INFO: worker thread finished; awaiting finish of 0 more threads
+2019-02-27 11:16:21,347:INFO: EPOCH - 3 : training on 192004 raw words (127484 effective words) took 0.1s, 1375250 effective words/s
+2019-02-27 11:16:21,441:INFO: worker thread finished; awaiting finish of 2 more threads
+2019-02-27 11:16:21,443:INFO: worker thread finished; awaiting finish of 1 more threads
+2019-02-27 11:16:21,445:INFO: worker thread finished; awaiting finish of 0 more threads
+2019-02-27 11:16:21,445:INFO: EPOCH - 4 : training on 192004 raw words (127445 effective words) took 0.1s, 1364751 effective words/s
+2019-02-27 11:16:21,537:INFO: worker thread finished; awaiting finish of 2 more threads
+2019-02-27 11:16:21,538:INFO: worker thread finished; awaiting finish of 1 more threads
+2019-02-27 11:16:21,540:INFO: worker thread finished; awaiting finish of 0 more threads
+2019-02-27 11:16:21,541:INFO: EPOCH - 5 : training on 192004 raw words (127247 effective words) took 0.1s, 1399456 effective words/s
+2019-02-27 11:16:21,542:INFO: training on a 960020 raw words (637027 effective words) took 0.5s, 1267455 effective words/s
+2019-02-27 11:16:31,790:INFO: Loading the datasets...
+2019-02-27 11:16:36,619:INFO: - done.
+2019-02-27 11:16:36,789:INFO: Starting training for 10 epoch(s)
+2019-02-27 11:22:11,486:ERROR: Invalid alias: The name clear can't be aliased because it is another magic command.
+2019-02-27 11:22:11,488:ERROR: Invalid alias: The name more can't be aliased because it is another magic command.
+2019-02-27 11:22:11,489:ERROR: Invalid alias: The name less can't be aliased because it is another magic command.
+2019-02-27 11:22:11,489:ERROR: Invalid alias: The name man can't be aliased because it is another magic command.
+2019-02-27 11:22:31,660:INFO: Loading the datasets...
+2019-02-27 11:22:36,043:INFO: - done.
+2019-02-27 11:22:38,947:INFO: Starting training for 10 epoch(s)
