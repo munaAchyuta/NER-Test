@@ -91,7 +91,8 @@ class Net(nn.Module):
         # since it is numerically more stable)
         return F.log_softmax(s, dim=1)   # dim: batch_size*seq_len x num_tags
 
-from torchcrf import CRF
+#from torchcrf import CRF
+from TorchCRF import CRF
 class Netcp(nn.Module):
     """
     This is the standard way to define your own network in PyTorch. You typically choose the components
@@ -129,7 +130,8 @@ class Netcp(nn.Module):
         # the fully connected layer transforms the output to give the final output layer
         self.fc = nn.Linear(params.lstm_hidden_dim, params.number_of_tags)
         
-        self.crf_model = CRF(9, batch_first=False) #num_tags=9
+        #self.crf_model = CRF(9, batch_first=False) #num_tags=9
+        self.crf_model = CRF(9)
         #self.crf = crf_model(self.fc, tags)
     
     def init_word_embeddings(self, embeddings):
@@ -176,11 +178,12 @@ class Netcp(nn.Module):
         # apply the fully connected layer and obtain the output (before softmax) for each token
         s = self.fc(s)                   # dim: batch_size*seq_len x num_tags
         #print("*** : ",s.shape)
+        mask = (labels >= 0).float()
         
         #s = torch.cat((s,s_pos),2) # concat word_embd with pos_onehot
         #print("*** : ",s.shape)
         #print("labels : ",labels.size())
-        return self.crf_model(s, labels)
+        return self.crf_model.forward(s, labels, mask)
 
         # apply log softmax on each token's output (this is recommended over applying softmax
         # since it is numerically more stable)
@@ -221,12 +224,163 @@ class Netcp(nn.Module):
         # apply the fully connected layer and obtain the output (before softmax) for each token
         s = self.fc(s)                   # dim: batch_size*seq_len x num_tags
         #print("*** : ",s.shape)
+        mask = (labels >= 0).float()
         
         #s = torch.cat((s,s_pos),2) # concat word_embd with pos_onehot
         #print("*** : ",s.shape)
         #print("labels : ",labels.size())
-        return self.crf_model.decode(s)
+        return self.crf_model.viterbi_decode(s, mask)
 
+class Netcppos(nn.Module):
+    """
+    This is the standard way to define your own network in PyTorch. You typically choose the components
+    (e.g. LSTMs, linear layers etc.) of your network in the __init__ function. You then apply these layers
+    on the input step-by-step in the forward function. You can use torch.nn.functional to apply functions
+    such as F.relu, F.sigmoid, F.softmax. Be careful to ensure your dimensions are correct after each step.
+
+    You are encouraged to have a look at the network in pytorch/vision/model/net.py to get a better sense of how
+    you can go about defining your own network.
+
+    The documentation for all the various components available to you is here: http://pytorch.org/docs/master/nn.html
+    """
+
+    def __init__(self, params):
+        """
+        We define an recurrent network that predicts the NER tags for each token in the sentence. The components
+        required are:
+
+        - an embedding layer: this layer maps each index in range(params.vocab_size) to a params.embedding_dim vector
+        - lstm: applying the LSTM on the sequential input returns an output for each token in the sentence
+        - fc: a fully connected layer that converts the LSTM output for each token to a distribution over NER tags
+
+        Args:
+            params: (Params) contains vocab_size, embedding_dim, lstm_hidden_dim
+        """
+        super(Netcppos, self).__init__()
+
+        # the embedding takes as input the vocab_size and the embedding_dim
+        self.embedding = nn.Embedding(params.vocab_size, params.embedding_dim)
+
+        # the LSTM takes as input the size of its input (embedding_dim), its hidden size
+        # for more details on how to use it, check out the documentation
+        self.lstm = nn.LSTM(params.embedding_dim, params.lstm_hidden_dim, batch_first=True)
+        #self.lstm = nn.LSTM(params.embedding_dim+params.pos_dim, params.lstm_hidden_dim, batch_first=True)
+
+        # the fully connected layer transforms the output to give the final output layer
+        self.fc1 = nn.Linear(params.lstm_hidden_dim, params.pos_dim)
+        
+        self.fc = nn.Linear(params.pos_dim+params.pos_dim, params.number_of_tags)
+        
+        #self.crf_model = CRF(9, batch_first=False) #num_tags=9
+        self.crf_model = CRF(9)
+        #self.crf = crf_model(self.fc, tags)
+    
+    def init_word_embeddings(self, embeddings):
+        """
+        Initialize embeddings with pre-trained embeddings.
+        :param embeddings: pre-trained embeddings
+        """
+        self.embedding.weight = nn.Parameter(embeddings)
+
+        
+    def forward(self, s, s_pos, labels):
+        """
+        This function defines how we use the components of our network to operate on an input batch.
+
+        Args:
+            s: (Variable) contains a batch of sentences, of dimension batch_size x seq_len, where seq_len is
+               the length of the longest sentence in the batch. For sentences shorter than seq_len, the remaining
+               tokens are PADding tokens. Each row is a sentence with each element corresponding to the index of
+               the token in the vocab.
+
+        Returns:
+            out: (Variable) dimension batch_size*seq_len x num_tags with the log probabilities of tokens for each token
+                 of each sentence.
+
+        Note: the dimensions after each step are provided
+        """
+        #                                -> batch_size x seq_len
+        # apply the embedding layer that maps each token to its embedding
+        s = self.embedding(s)            # dim: batch_size x seq_len x embedding_dim
+        
+        #s = torch.cat((s,s_pos),2) # concat word_embd with pos_onehot
+
+        # run the LSTM along the sentences of length seq_len
+        #s = s.to(dtype=torch.long)
+        s, _ = self.lstm(s)              # dim: batch_size x seq_len x lstm_hidden_dim
+
+        # make the Variable contiguous in memory (a PyTorch artefact)
+        s = s.contiguous()
+
+        # reshape the Variable so that each row contains one token
+        #s = s.view(-1, s.shape[2])       # dim: batch_size*seq_len x lstm_hidden_dim
+        #print("after lstm : ",s.shape)
+        print(s.shape)
+
+        # apply the fully connected layer and obtain the output (before softmax) for each token
+        s = self.fc1(s)                   # dim: batch_size*seq_len x num_tags
+        print(s.shape)
+        print(s_pos.shape)
+        
+        # concat pos_tag with word
+        s = torch.cat((s,s_pos),2)
+        print(s.shape)
+        
+        s = self.fc(s)                   # dim: batch_size*seq_len x num_tags
+        
+        #print("*** : ",s.shape)
+        mask = (labels >= 0).float()
+        
+        #s = torch.cat((s,s_pos),2) # concat word_embd with pos_onehot
+        #print("*** : ",s.shape)
+        #print("labels : ",labels.size())
+        return self.crf_model.forward(s, labels, mask)
+
+        # apply log softmax on each token's output (this is recommended over applying softmax
+        # since it is numerically more stable)
+        #return F.log_softmax(s, dim=1)   # dim: batch_size*seq_len x num_tags
+    def forward_decode(self, s, s_pos, labels):
+        """
+        This function defines how we use the components of our network to operate on an input batch.
+
+        Args:
+            s: (Variable) contains a batch of sentences, of dimension batch_size x seq_len, where seq_len is
+               the length of the longest sentence in the batch. For sentences shorter than seq_len, the remaining
+               tokens are PADding tokens. Each row is a sentence with each element corresponding to the index of
+               the token in the vocab.
+
+        Returns:
+            out: (Variable) dimension batch_size*seq_len x num_tags with the log probabilities of tokens for each token
+                 of each sentence.
+
+        Note: the dimensions after each step are provided
+        """
+        #                                -> batch_size x seq_len
+        # apply the embedding layer that maps each token to its embedding
+        s = self.embedding(s)            # dim: batch_size x seq_len x embedding_dim
+        
+        #s = torch.cat((s,s_pos),2) # concat word_embd with pos_onehot
+
+        # run the LSTM along the sentences of length seq_len
+        #s = s.to(dtype=torch.long)
+        s, _ = self.lstm(s)              # dim: batch_size x seq_len x lstm_hidden_dim
+
+        # make the Variable contiguous in memory (a PyTorch artefact)
+        s = s.contiguous()
+
+        # reshape the Variable so that each row contains one token
+        #s = s.view(-1, s.shape[2])       # dim: batch_size*seq_len x lstm_hidden_dim
+        #print("after lstm : ",s.shape)
+
+        # apply the fully connected layer and obtain the output (before softmax) for each token
+        s = self.fc(s)                   # dim: batch_size*seq_len x num_tags
+        #print("*** : ",s.shape)
+        mask = (labels >= 0).float()
+        
+        #s = torch.cat((s,s_pos),2) # concat word_embd with pos_onehot
+        #print("*** : ",s.shape)
+        #print("labels : ",labels.size())
+        return self.crf_model.viterbi_decode(s, mask)
 
 def loss_fn(outputs, labels):
     """
